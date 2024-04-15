@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="../../common.props"/>
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BeniceSoft.Abp.AspNetCore" Version="8.1.1-preview.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Authentication\" />
+    </ItemGroup>
+
+</Project>
