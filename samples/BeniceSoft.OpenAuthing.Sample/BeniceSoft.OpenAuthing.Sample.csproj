@@ -7,8 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BeniceSoft.Abp.AspNetCore" Version="8.1.1-dev.2024041501" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\BeniceSoft.OpenAuthing.AspNetCore\BeniceSoft.OpenAuthing.AspNetCore.csproj" />
   </ItemGroup>
 
 </Project>
