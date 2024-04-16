@@ -6,13 +6,8 @@ public class OpenAuthingBuilder
 {
     public IServiceCollection Services { get; }
 
-    public OpenAuthingBuilder(IServiceCollection services, string permissionSpaceId)
+    public OpenAuthingBuilder(IServiceCollection services)
     {
-        ArgumentNullException.ThrowIfNull(services, nameof(services));
-        ArgumentException.ThrowIfNullOrWhiteSpace(permissionSpaceId, nameof(permissionSpaceId));
-
         Services = services;
-
-        Services.Configure<OpenAuthingOptions>(opt => { opt.PermissionSpaceId = permissionSpaceId; });
     }
 }

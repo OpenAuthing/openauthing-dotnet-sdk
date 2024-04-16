@@ -1,6 +1,6 @@
 using System.Collections.Immutable;
 
-namespace BeniceSoft.OpenAuthing.AspNetCore.Permissions;
+namespace BeniceSoft.OpenAuthing.AspNetCore.Authorization.Permissions;
 
 public interface ICurrentUserPermission
 {

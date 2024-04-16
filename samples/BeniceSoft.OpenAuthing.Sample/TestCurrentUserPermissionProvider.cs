@@ -1,5 +1,5 @@
 using System.Collections.Immutable;
-using BeniceSoft.OpenAuthing.AspNetCore.Permissions;
+using BeniceSoft.OpenAuthing.AspNetCore.Authorization.Permissions;
 
 namespace BeniceSoft.OpenAuthing.Sample;
 

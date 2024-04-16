@@ -1,5 +1,5 @@
 using BeniceSoft.OpenAuthing.AspNetCore.Authorization;
-using BeniceSoft.OpenAuthing.AspNetCore.Permissions;
+using BeniceSoft.OpenAuthing.AspNetCore.Authorization.Permissions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;
@@ -46,13 +46,13 @@ public static class OpenAuthingBuilderExtensions
         builder.Services.AddAuthorizationCore();
         builder.Services.Replace(ServiceDescriptor.Transient<IAuthorizationPolicyProvider, OpenAuthingAuthorizationPolicyProvider>());
 
-        configure?.Invoke(new OpenAuthingAuthorizationBuilder(builder));
-        
+        configure?.Invoke(new OpenAuthingAuthorizationBuilder(builder.Services, builder));
+
         return builder;
     }
 
     public static OpenAuthingBuilder AddCurrentUserPermissionProvider<T>(this OpenAuthingBuilder builder, ServiceLifetime lifetime = ServiceLifetime.Transient)
-        where T : class, ICurrentUserPermissionProvider, new()
+        where T : class, ICurrentUserPermissionProvider
     {
         builder.Services.Add(new ServiceDescriptor(typeof(ICurrentUserPermissionProvider), typeof(T), lifetime));
         return builder;

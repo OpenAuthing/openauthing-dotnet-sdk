@@ -1,4 +1,4 @@
-using BeniceSoft.OpenAuthing.AspNetCore.Permissions;
+using BeniceSoft.OpenAuthing.AspNetCore.Authorization.Permissions;
 using Microsoft.AspNetCore.Authorization;
 
 namespace BeniceSoft.OpenAuthing.AspNetCore.Authorization;

@@ -40,7 +40,7 @@ public class SampleModule : AbpModule
             });
         });
 
-        context.Services.AddOpenAuthing("sdfsdf")
+        context.Services.AddOpenAuthing("sample")
             .AddAuthentication(options =>
             {
                 options.Authority = "http://localhost:5129/";

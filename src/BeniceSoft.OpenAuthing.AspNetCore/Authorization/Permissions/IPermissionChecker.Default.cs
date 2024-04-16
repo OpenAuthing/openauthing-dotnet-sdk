@@ -1,14 +1,14 @@
 using System.Security.Claims;
 using Microsoft.Extensions.Options;
 
-namespace BeniceSoft.OpenAuthing.AspNetCore.Permissions;
+namespace BeniceSoft.OpenAuthing.AspNetCore.Authorization.Permissions;
 
-public class OpenAuthingPermissionChecker : IPermissionChecker
+public class PermissionChecker : IPermissionChecker
 {
     private readonly OpenAuthingOptions _options;
     private readonly ICurrentUserPermissionProvider _currentUserPermissionProvider;
 
-    public OpenAuthingPermissionChecker(
+    public PermissionChecker(
         IOptions<OpenAuthingOptions> options,
         ICurrentUserPermissionProvider currentUserPermissionProvider)
     {

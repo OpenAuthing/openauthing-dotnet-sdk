@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace BeniceSoft.OpenAuthing.AspNetCore.Permissions;
+namespace BeniceSoft.OpenAuthing.AspNetCore.Authorization.Permissions;
 
 public interface IPermissionChecker
 {
